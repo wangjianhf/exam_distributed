@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      enabled: true
+      routes:
+        - id: exam-gateway
+          uri: http://localhost:8081
+          predicates:
+            - Path=/exam-gateway/**
+          filters:
+            - StripPrefix= 1
