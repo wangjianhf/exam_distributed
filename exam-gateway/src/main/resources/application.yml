@@ -11,4 +11,4 @@ spring:
           predicates:
             - Path=/exam-gateway/**
           filters:
-            - StripPrefix= 1
+            - StripPrefix = 1
